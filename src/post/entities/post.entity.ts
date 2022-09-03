@@ -8,14 +8,19 @@ export class Post {
     @Column({ nullable: false })
     title: string;
 
-    @Column()
+    @Column({
+        default: '',
+    })
     desc: string; // Description
 
-    @Column()
-    thumb: string; // URL for the image
+    @Column({
+        default: '',
+    })
+    featured_image: string; // URL for the image
 
     @Column({
         type: 'text',
+        default: '',
     })
     content: string;
 
